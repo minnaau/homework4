@@ -114,7 +114,7 @@ header p{
 .about, .method, .clients, .contact{
   /*Your Code Here*/
   grid-column-start: 2 span 1; /*Spans 1 column by default*/
-  grid-row: 2 span 1 / 6 span 1;
+  /* grid-row: 2 span 1 / 6 span 1; */
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
@@ -127,24 +127,28 @@ header p{
 
 .about, .about-image{
    /*Your Code Here*/
-
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .method, .method-image{
    /*Your Code Here*/
-
+   grid-row-start: 3;
+   grid-row-end: 4;
 }
 
 
 .clients, .clients-image{
     /*Your Code Here*/
-
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 
 .contact, .contact-image{
     /*Your Code Here*/
-
+    grid-row-start: 5;
+    grid-row-end: 6;
 }
 
 .text-block{
