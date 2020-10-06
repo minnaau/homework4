@@ -113,7 +113,7 @@ header p{
 
 .about, .method, .clients, .contact{
   /*Your Code Here*/
-  grid-column-start: 2; /*Spans 1 column by default*/
+  grid-column-start: 2 span 1; /*Spans 1 column by default*/
   grid-row: 2 span 1 / 6 span 1;
 }
 
