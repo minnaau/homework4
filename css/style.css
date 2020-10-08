@@ -1,5 +1,5 @@
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -53,7 +53,8 @@ a:hover, a:focus {
   transition: top 1s ease-out;
   z-index: 1;
   /*Your code here*/
-  display: none;
+  position: absolute;
+  top: -40px;
 }
 
 /*Your Code Here*/
@@ -78,14 +79,12 @@ footer{
   text-align: center;
 }
 
-
-
-
 .container{
   /*Your Code Here*/
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   row-gap: 15px;
+  display: grid;
 }
 
 header{
@@ -113,7 +112,7 @@ header p{
 
 .about, .method, .clients, .contact{
   /*Your Code Here*/
-  grid-column-start: 2 span 1; /*Spans 1 column by default*/
+  grid-column: 2 / span 1; /*Spans 1 column by default*/
   /* grid-row: 2 span 1 / 6 span 1; */
 }
 
@@ -122,33 +121,38 @@ header p{
   grid-column: 1 / -1;
   max-height: 700px;
   display: grid;
-  grid-row: 2 span 1 / 6 span 1;
+  /* grid-row: 2 span 1 / 6 span 1; */
+  overflow: hidden;
 }
 
 .about, .about-image{
    /*Your Code Here*/
-  grid-row-start: 2;
-  grid-row-end: 3;
+  /* grid-row-start: 2;
+  grid-row-end: 3; */
+  grid-row: 2 / span 1;
 }
 
 .method, .method-image{
    /*Your Code Here*/
-   grid-row-start: 3;
-   grid-row-end: 4;
+   /* grid-row-start: 3;
+   grid-row-end: 4; */
+   grid-row: 3 / span 1;
 }
 
 
 .clients, .clients-image{
     /*Your Code Here*/
-    grid-row-start: 4;
-    grid-row-end: 5;
+    /* grid-row-start: 4;
+    grid-row-end: 5; */
+    grid-row: 4 / span 1;
 }
 
 
 .contact, .contact-image{
     /*Your Code Here*/
-    grid-row-start: 5;
-    grid-row-end: 6;
+    /* grid-row-start: 5;
+    grid-row-end: 6; */
+    grid-row: 5 / span 1;
 }
 
 .text-block{
@@ -157,7 +161,8 @@ background-color: rgba(255, 255, 255, .8);
   padding: 30px;
   /*Your code here:*/
   text-align: center;
-  vertical-align: center;
+  /* vertical-align: center; */
+  align-self: center;
 }
 
 
@@ -165,8 +170,9 @@ background-color: rgba(255, 255, 255, .8);
   nav{
     padding: 30px 0px;
     /*Your code here:*/
-    justify-items: end;
-    align-items: end;
+    /* justify-items: end;
+    align-items: end; */
+    text-align: end;
     vertical-align: center;
   }
 
@@ -178,12 +184,12 @@ background-color: rgba(255, 255, 255, .8);
 
   .about, .clients, .method-image, .contact-image{
     /*Your code here:*/
-    grid-column-start: 3 span 2;
+    grid-column: 3 / span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
     /*Your code here:*/
-    grid-column: 2 span 2;
+    grid-column: 2 / span 2;
   }
 }
 
